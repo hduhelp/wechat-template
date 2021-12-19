@@ -32,3 +32,13 @@ golang 极速入门
 
 [点我看书](https://github.com/justjavac/free-programming-books-zh_CN#go)
 
+
+
+## Module 配置
+
+module参考[wechatPong](https://github.com/hduhelp/wechat-template/blob/main/module/wechatPong/init.go)
+
+编写自己的Module后在 [main.go](https://github.com/hduhelp/wechat-template/blob/main/main.go) 中启用Module
+
+[自定义组件方法与组件插拔逻辑](https://github.com/hduhelp/wechat-template/tree/main/doc/moduleRegister.md)
+

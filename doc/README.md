@@ -1,4 +1,4 @@
-# 项目开发说明 开发文档
+# 项目开发说明/开发文档
 
 ## 环境初始化
 
@@ -48,32 +48,6 @@ update(wechatPong): add template message test
   >
   > Stop() 结束时操作 一般为 defer wg.Done 
 
-- database.go 数据库的重启和创建
-- messageHandler.go 微信公众号获取的消息处理
-  - 重要结构体:
-    - RouterGroup
-    - MsgEngine
-    - Message
-  - 主要别名:
-    - HandlerFunc
-    - HandlersChain
-  - 主要方法:
-    - MsgEngine.Group 
-    - MsgEngine.Use
-    - MsgEngine.MsgText
-    - MsgEngine.EventClick
-    - 更多请自行查看 IRoutes 接口
-- server.go 进行服务的初始化
-  - 重要结构体 
-    - Server 包含了 微信引擎 gin 消息处理函数
-  - 主要函数
-    - 服务的初始化 启动 结束
-- wechatBind.go
-  - 重要结构体
-  - 重要函数 进行 hduid 与 微信 id 的相互转换
-    - ConvertWechatUnionIdToHDUId 
-    - ConvertHDUIdToWechatUnionId
-
 
 ### ./modules
 
@@ -87,6 +61,6 @@ update(wechatPong): add template message test
 
 框架文件夹
 
-## 微信公众号配置 
+## 微信公众号配置 and more 
 
-[配置](./developEnvDebug.md)
+[Set up your develop Env](./developEnvDebug.md)
