@@ -8,25 +8,26 @@
 
 PS: **需要注意** 如果遇到 微信 API 并未实现的 可参照对应的 API 规则进行请求
 
+## 项目初始化
+
+请注意在 go 1.17 或者以上版本的情况下进行处理
+
+在项目的环境情况下 (存在 go.mod) 进行 `go mod tidy` 操作
+
+会自动从远程拉取项目 若遇到 404、 timeout 等错误 可能是您的代理爆炸了
+
+您需要检查 代理配置
+
 - [wechat API official Document](https://developers.weixin.qq.com/doc/offiaccount/Getting_Started/Overview.html)
 
 ## 配置文件
 
-[配置文件 样本](../application.example.yaml)
-需要重命名为 [application.yaml](../application.yaml)
+1. 配置文件准备：复制 [配置文件 样本](../application.example.yaml) 并重命名为 `application.yaml`。
+2. 配置项修改：往下看
 
-## 项目初始化 
+## 微信公众号测试号配置
 
-请注意在 go 1.17 或者以上版本的情况下进行处理
-
-在项目的环境情况下 (存在 go.mod) 进行 `go mod tidy` 操作 
-
-会自动从远程拉取项目 若遇到 404、 timeout 等错误 可能是您的代理爆炸了
-
-您需要检查 代理配置 
-
-
-## 微信公众号测试
+## 测试号申请与配置
 
 前往 [微信官方](https://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login) 申请测试公众号，  
 在网页内填写相应信息，并修改对应的配置，详见下图：  
@@ -48,6 +49,10 @@ Just like [文档](https://silenceper.com/wechat/officialaccount/start.html) 中
 如果您有自己的服务器域名 与 SSL 证书可以完全使用正常的服务器进行测试 这可能相对而言较为麻烦 当然更加贴近实际的生产环境
 
 ### 这里是小小的 ngrok 使用演示 
+
+Q：为什么要用 ngrok ？
+
+A：用户操作微信客户端，请求会先发送至微信服务器，再由微信服务器请求本项目。所以本项目需要提供一个公网可访问的服务，用于接收微信服务器的请求。而我们本地测试环境无公网ip，所以需要使用ngrok进行内网穿透。
 
 Windows 下可以快速使用 [ngrok Win amd64.exe](https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip) (无需注册帐号...ngrok 的官方政策是 只有 https 等链接才需要账户) 
 

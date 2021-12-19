@@ -9,7 +9,7 @@
      1. 在模块入口文件，定义一个实现了 [Module接口](../server/module.go)的类型，如 `pong`，可以根据需要自定义模块内部字段。
      2. 定义一个指针 `instance` 指向 `pong`，并在 `init()` 函数内调用 `server.RegisterModule()`函数完成模块注册第一步，如图：
      ![img2](./img/moduleRegisterImgs/img2.png)
-     3. 在 [main.go](../server/main.go) 中以 `import _` 的形式引入模块包，完成模块注册第二步。（同理，注释或删除 `import _` 语句即可实现模块卸载）
+     3. 在 [main.go](../main.go) 中以 `import _` 的形式引入模块包，完成模块注册第二步。（同理，注释或删除 `import _` 语句即可实现模块卸载）
   4. **填充模块接口方法**：`Module` 接口定义了以下几个方法：这里只做简单介绍，详细使用说明见 [代码注释](../module/wechatPong/init.go)。
 
      + GetModuleInfo() : 用于获取模块信息。一般照抄，修改模块名称和相应字符串即可
