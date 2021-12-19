@@ -51,11 +51,9 @@ update(wechatPong): add template message test
 
 ### ./modules
 
-模块文件夹 使用文件夹 集合每一个子模块的 go 模块 package 表示
+模块文件夹，每一个文件夹即为一个 `go package`，也即一个模块
 
-并且在 [main.go](../main.go) 启用你的模块
-
-[示例模块](../module/wechatPong/init.go)
+[模块详细介绍](./moduleRegister.md)
 
 ### ./server
 
