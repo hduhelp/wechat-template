@@ -6,30 +6,28 @@
 
 ## 快速开始
 
-按照示例配置文件 application.example.yaml 新建一个配置文件 application.yaml
+1. 项目配置：按照示例配置文件 [./application.example.yaml](./application.example.yaml) 新建配置文件 application.yaml 
+2. 运行本框架 
+3. 微信端配置：前往微信后端填写服务器地址(URL)为「你配置的地址 + `/serve`」，如：
+    > http://xxx.xxxx.com/serve
 
-然后运行本框架
+如果一切顺利，此时你的公众号后端就上线啦。  
 
-前往微信后端填写服务器地址(URL)为你配置的地址+/serve，如：
-> http://xxx.xxxx.com/serve
+可通过向公众号发送 `ping` 判断是否走通，正确配置将收到回复。
 
-如果一切顺利，此时你的公众号后端就上线啦。
+## 快速编写子模块
 
-## [开发文档](./doc/)
+1. 在 `/module` 下新建文件夹，内容可参考 [wechatPong](./module/wechatPong/init.go)
+2. 开启子模块：在 [main.go](./main.go) 中以 `import _` 的方式引用模块 package，即可启用Module
+
+完整可参考：[自定义组件方法与组件插拔逻辑](./doc/moduleRegister.md)
+
+
+## 开发文档详细指南
+[开发文档与规范](./doc/)
 
 ## 不了解go?
 
-golang 极速入门
-
-[点我看书](https://github.com/justjavac/free-programming-books-zh_CN#go)
-
-[HDUHELP Official Backend Document](https://github.com/hduhelp/backend_guide/)
-
-## Module 配置
-
-module参考[wechatPong](https://github.com/hduhelp/wechat-template/blob/main/module/wechatPong/init.go)
-
-编写自己的Module后在 [main.go](https://github.com/hduhelp/wechat-template/blob/main/main.go) 中启用Module
-
-[自定义组件方法与组件插拔逻辑](https://github.com/hduhelp/wechat-template/tree/main/doc/moduleRegister.md)
+1. [HDUHELP Official Backend Document](https://github.com/hduhelp/backend_guide/)
+2. [点我看书](https://github.com/justjavac/free-programming-books-zh_CN#go)
 
