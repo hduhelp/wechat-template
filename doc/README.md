@@ -4,36 +4,19 @@
 
 [环境初始化与排错文档](./developEnvDebug.md)
 
-## Commit 规范
 
-### 标准格式
-```
-Action(modname/package): (add|update|..all action you done)
-```
-
-### example
-
-```
-update(wechatPong): add template message test 
-```
-
-## 接口标准
-
-1. URL中字母全部小写
-2. 如果有单词拼接，使用中划线‘-’，不使用下划线‘_’ (在搜索引擎中，把中划线当做空格处理，而下划线是被忽略的。使用中划线是对搜索引擎友好的写法)
-3. 资源必须采用资源名词的复数形式
-4. 层级尽量不超过三层
-5. 参数不允许超过3个
-6. 如果是内容资源的URL，不允许以参数方式显示
+## 建议与规范
+[建议与规范](./spec.md)
 
 ## 项目结构 
 
 > WorkingDir . is repo root
 
-### ./server
+### 框架核心层 `./server`
 
-服务基础软件 所在目录 中间件
+实现了模块化的统一注册管理逻辑与微信消息链的封装。如无必要，不应更改此模块。
 
+- server.go 组织框架核心
 - module.go 文件规定了模块的 必要函数
   
   下图 按照执行顺序排列
@@ -47,18 +30,15 @@ update(wechatPong): add template message test
   > Start server 的开始区 可以 defer sentry.Recover() 用以捕捉错误
   >
   > Stop() 结束时操作 一般为 defer wg.Done 
+- middleware.go 中间件
+- moduleId.go 模块id
+- moduleInfo.go 模块信息
+- msgContext.go 消息上下文
+- msgEngine.go 微信消息引擎
 
 
-### ./modules
+### 模块层 `./modules`
 
-模块文件夹，每一个文件夹即为一个 `go package`，也即一个模块
+模块文件夹，此处编写业务逻辑。每一个文件夹即为一个 `go package`，也即一个模块。
 
 [模块详细介绍](./moduleRegister.md)
-
-### ./server
-
-框架文件夹
-
-## 微信公众号配置 and more 
-
-[Set up your develop Env](./developEnvDebug.md)
