@@ -1,0 +1,8 @@
+httpEngine:
+  port: 9955
+
+wechat:
+  appID: xxxxxxxxxxxxx
+  appSecret: xxxxxxxxxxx
+  token: xxxxxxxxxx
+  encodingAESKey: xxxxxxxxxxxxx
