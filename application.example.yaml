@@ -6,3 +6,4 @@ wechat:
   appSecret: xxxxxxxxxxx
   token: xxxxxxxxxx
   encodingAESKey: xxxxxxxxxxxxx
+  # The encodingAESKey is optional.

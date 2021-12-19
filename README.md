@@ -23,7 +23,7 @@ golang 极速入门
 
 [点我看书](https://github.com/justjavac/free-programming-books-zh_CN#go)
 
-
+[HDUHELP Official Backend Document](https://github.com/hduhelp/backend_guide/)
 
 ## Module 配置
 
