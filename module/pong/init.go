@@ -16,6 +16,9 @@ var instance *pong
 type pong struct {
 }
 
+// GetModuleInfo 获取模块信息
+// 返回值为 `server.ModuleInfo` 类型，其中包含模块 ID 和一个 module 实例指针.
+// 一般照抄，修改模块名称和相应字符串即可
 func (m *pong) GetModuleInfo() server.ModuleInfo {
 	return server.ModuleInfo{
 		ID:       server.NewModuleID("atom", "pong"),
