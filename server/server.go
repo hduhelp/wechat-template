@@ -3,7 +3,6 @@ package server
 import (
 	sentrygin "github.com/getsentry/sentry-go/gin"
 	"github.com/gin-gonic/gin"
-	"github.com/hduhelp/api_open_sdk/transfer"
 	"github.com/hduhelp/wechat-template/config"
 	wechat "github.com/silenceper/wechat/v2"
 	"github.com/silenceper/wechat/v2/cache"
@@ -28,9 +27,6 @@ var logger = logrus.WithField("server", "internal")
 // Init 快速初始化
 func Init() {
 	logger.Info("wechat_mp_server version: ", Version)
-
-	// 初始化 transfer
-	transfer.Init(config.GlobalConfig.GetString("transfer.appID"), config.GlobalConfig.GetString("transfer.appKey"))
 
 	// 初始化网络服务
 	logger.Info("start init gin...")
