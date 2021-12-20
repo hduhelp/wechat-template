@@ -34,7 +34,7 @@
 - moduleId.go 模块id
 - moduleInfo.go 模块信息
 - msgContext.go 消息上下文
-- msgEngine.go 微信消息引擎
+- msgEngine.go 微信消息路由
 
 
 ### 模块层 `./modules`

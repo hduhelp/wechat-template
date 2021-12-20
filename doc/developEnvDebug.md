@@ -1,6 +1,6 @@
 # 环境建立与排错
 
-## 采用环境
+## 第三方依赖
 
 - [wechat golang api 库](https://github.com/silenceper/wechat)
 
@@ -22,12 +22,14 @@ PS: **需要注意** 如果遇到 微信 API 并未实现的 可参照对应的 
 
 ## 配置文件
 
-1. 配置文件准备：复制 [配置文件 样本](../application.example.yaml) 并重命名为 `application.yaml`。
-2. 配置项修改：往下看
+配置文件准备：复制 [配置文件 样本](../application.example.yaml) 并重命名为 `application.yaml`。
 
-## 微信公众号测试号配置
+### 项目配置
+目前项目配置仅设置了 `gin` 端口： `httpEngine.port`，默认 9955 。
 
-## 测试号申请与配置
+### 微信公众号测试号配置
+
+#### 测试号申请与配置
 
 前往 [微信官方](https://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login) 申请测试公众号，  
 在网页内填写相应信息，并修改对应的配置，详见下图：  
@@ -48,7 +50,7 @@ Just like [文档](https://silenceper.com/wechat/officialaccount/start.html) 中
 
 如果您有自己的服务器域名 与 SSL 证书可以完全使用正常的服务器进行测试 这可能相对而言较为麻烦 当然更加贴近实际的生产环境
 
-### 这里是小小的 ngrok 使用演示 
+#### 这里是小小的 ngrok 使用演示 
 
 Q：为什么要用 ngrok ？
 

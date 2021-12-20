@@ -12,9 +12,9 @@
 
 ## 快速开始
 
-1. 项目配置：按照示例配置文件 [./application.example.yaml](./application.example.yaml) 新建配置文件 application.yaml 
+1. 项目配置：按照示例配置文件 [application.example.yaml](./application.example.yaml) 新建配置文件 `application.yaml` 。（[完整环境配置文档](./doc/developEnvDebug.md))
 2. 运行本框架 
-3. 微信端配置：前往微信后端填写服务器地址(URL)为「你配置的地址 + `/serve`」，如：
+3. 微信端配置：前往微信公众号网页填写。其中，服务器地址(URL)为「你配置的地址 + `/serve`」，如：
     > http://xxx.xxxx.com/serve
 
 如果一切顺利，此时你的公众号后端就上线啦。  
@@ -30,7 +30,7 @@
 
 
 ## 开发文档详细指南
-[开发文档详细指南](./doc/)
+[开发文档详细指南](./doc/README.md)
 
 ## 不了解go?
 
